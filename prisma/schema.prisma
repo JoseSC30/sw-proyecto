@@ -26,3 +26,10 @@ model usuario_movil {
   choferId   Int
   fecha_registro DateTime @default(now())
 }
+
+model administrador {
+  id Int @id @default(autoincrement())
+  email String @unique
+  username String
+  password String
+}
